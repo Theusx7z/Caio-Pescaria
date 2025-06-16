@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Caio Miyoshi Pesca Esportiva🎣</title>
 <style>
   /* Reset geral */
@@ -19,6 +19,17 @@
     font-family: 'Segoe UI', sans-serif;
     color: #00e5ff;
     text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Importante para Safari com notch */
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    background-color: transparent;
   }
 
   /* Fundo fixo atrás de tudo */
@@ -30,6 +41,11 @@
     background: url('35a2aa82-fd87-453e-862b-4ed3d37002a3.jpeg') no-repeat center center;
     background-size: cover;
     z-index: -1;
+    /* Cobrir área segura */
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   body {
@@ -131,7 +147,7 @@
   <div id="fundo-fixo"></div>
 
   <h1>Caio Miyoshi Pesca Esportiva</h1>
-  <p>Me Chame No Whatsapp</p>
+  <p>Me ajuda Deus</p>
 
   <!-- Fotos no topo -->
   <div class="fotos-topo">

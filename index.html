@@ -57,40 +57,8 @@
       margin-bottom: 30px;
     }
 
-    input[type="date"] {
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 10px;
-      border: none;
-      margin-bottom: 20px;
-      width: 100%;
-    }
-
-    .horarios {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    .horarios button {
-      padding: 10px;
-      background: transparent;
-      border: 2px solid #00e5ff;
-      border-radius: 10px;
-      color: #00e5ff;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .horarios button:hover {
-      background: #00e5ff;
-      color: black;
-    }
-
-    #confirmar {
-      padding: 12px 30px;
+    #marcar {
+      padding: 15px 30px;
       font-size: 18px;
       border-radius: 10px;
       border: 2px solid #00e5ff;
@@ -101,7 +69,7 @@
       width: 100%;
     }
 
-    #confirmar:hover {
+    #marcar:hover {
       background: #00e5ff;
       color: black;
     }
@@ -109,7 +77,7 @@
 </head>
 <body>
   <h1>Caio Miyoshi Pescaria</h1>
-  <p>Escolha uma data e um horário para agendar</p>
+  <p>Escolha um horário para agendar</p>
 
   <!-- Fotos no topo -->
   <div class="fotos-topo">
@@ -119,43 +87,15 @@
     <img src="https://i.imgur.com/1b9L5Qn.jpeg" alt="Peixe 4">
   </div>
 
-  <!-- Calendário e horário -->
+  <!-- Botão único -->
   <div class="container">
-    <input type="date" id="data">
-
-    <div class="horarios">
-      <button onclick="selecionarHorario('06:00')">06:00</button>
-      <button onclick="selecionarHorario('08:00')">08:00</button>
-      <button onclick="selecionarHorario('10:00')">10:00</button>
-      <button onclick="selecionarHorario('12:00')">12:00</button>
-    </div>
-
-    <button id="confirmar" onclick="confirmarHorario()">Confirmar horário</button>
+    <button id="marcar" onclick="marcarHorario()">Marcar horário</button>
   </div>
 
   <script>
-    let horarioSelecionado = '';
-
-    function selecionarHorario(horario) {
-      horarioSelecionado = horario;
-      const botoes = document.querySelectorAll('.horarios button');
-      botoes.forEach(btn => {
-        btn.style.background = 'transparent';
-        btn.style.color = '#00e5ff';
-      });
-      event.target.style.background = '#00e5ff';
-      event.target.style.color = 'black';
-    }
-
-    function confirmarHorario() {
-      const data = document.getElementById('data').value;
-      if (!data || !horarioSelecionado) {
-        alert("Selecione uma data e um horário!");
-        return;
-      }
-
-      const mensagem = `Olá, gostaria de agendar minha pescaria para o dia ${data} às ${horarioSelecionado}.`;
-      const numero = "5541987724730"; // Seu número de WhatsApp
+    function marcarHorario() {
+      const mensagem = `Olá! Gostaria de marcar um horário para a pescaria.`;
+      const numero = "5541987724730"; // Seu número do WhatsApp
       const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
       window.open(url, "_blank");
     }

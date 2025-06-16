@@ -5,22 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Caio Miyoshi Pesca Esportiva🎣</title>
   <style>
+    /* Estilo unificado com fundo fixo pelo ::before */
     html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      position: relative;
       min-height: 100vh;
     }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: url('IMG_5057.png') no-repeat center center;
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      z-index: -1;
+      background: url('IMG_5068.png') no-repeat center center;
       background-size: cover;
-      background-attachment: scroll;
+    }
+
+    body {
+      color: #00e5ff;
+      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: #00e5ff;
-      text-align: center;
+      /* removido background do segundo código para usar o ::before */
     }
 
     h1 {

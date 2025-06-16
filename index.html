@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Caio Miyoshi Pesca Esportiva🎣</title>
   <style>
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
+      padding: 0;
+      overflow-x: hidden;
       font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
       background: url('IMG_5057.jpeg') no-repeat center center fixed;
       background-size: cover;
       display: flex;
@@ -93,6 +99,13 @@
     .galeria video {
       max-height: 180px;
     }
+
+    footer {
+      color: white;
+      margin: 20px 0;
+      font-size: 14px;
+      text-shadow: 0 0 5px #000;
+    }
   </style>
 </head>
 <body>
@@ -132,6 +145,8 @@
     <video src="https://www.w3schools.com/html/movie.mp4" controls></video>
   </div>
 
+  <footer>©2025 Caio Miyoshi Pesca Esportiva 🎣</footer>
+
   <script>
     function marcarHorario() {
       const mensagem = `Olá! Gostaria de marcar um horário para a pescaria.`;
@@ -139,13 +154,6 @@
       const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
       window.open(url, "_blank");
     }
-
-
-<footer>
-  ©2025 Caio Miyoshi Pesca Esportiva🎣
-  </footer>
-
-    
   </script>
 </body>
 </html>

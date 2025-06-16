@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Caio Miyoshi Pesca Esportiva🎣</title>
 <style>
-  /* Reset global */
+  /* Reset geral */
   * {
     margin: 0;
     padding: 0;
@@ -15,26 +15,34 @@
   html, body {
     height: 100%;
     width: 100%;
-    background: url('35a2aa82-fd87-453e-862b-4ed3d37002a3.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    overflow-x: hidden;
     font-family: 'Segoe UI', sans-serif;
     color: #00e5ff;
     text-align: center;
-    overflow-x: hidden;
+  }
+
+  /* Fundo fixo atrás de tudo */
+  #fundo-fixo {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('35a2aa82-fd87-453e-862b-4ed3d37002a3.jpeg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
   }
 
   body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     min-height: 100vh;
     background-color: transparent;
   }
 
   h1 {
     font-size: 2.5em;
-    margin: 30px 0 10px 0;
+    margin: 30px 0 10px;
     text-shadow: 0 0 10px #000;
   }
 
@@ -120,8 +128,10 @@
 </style>
 </head>
 <body>
+  <div id="fundo-fixo"></div>
+
   <h1>Caio Miyoshi Pesca Esportiva</h1>
-  <p>cansado disso ja</p>
+  <p>Me Chame No Whatsapp</p>
 
   <!-- Fotos no topo -->
   <div class="fotos-topo">

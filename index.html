@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Caio Miyoshi Pescaria</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('IMG_5053.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #00e5ff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-top: 30px;
+      text-shadow: 0 0 10px #000;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 18px;
+      color: white;
+      text-shadow: 0 0 5px #000;
+    }
+
+    .container {
+      margin-top: 30px;
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    input[type="date"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .horarios {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .horarios button {
+      padding: 10px;
+      background: transparent;
+      border: 2px solid #00e5ff;
+      border-radius: 10px;
+      color: #00e5ff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .horarios button:hover {
+      background: #00e5ff;
+      color: black;
+    }
+
+    #confirmar {
+      padding: 12px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 2px solid #00e5ff;
+      background: transparent;
+      color: #00e5ff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #confirmar:hover {
+      background: #00e5ff;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Caio Miyoshi Pescaria</h1>
+  <p>Escolha uma data e um horário para agendar</p>
+
+  <div class="container">
+    <input type="date" id="data">
+
+    <div class="horarios">
+      <button onclick="selecionarHorario('06:00')">06:00</button>
+      <button onclick="selecionarHorario('08:00')">08:00</button>
+      <button onclick="selecionarHorario('10:00')">10:00</button>
+      <button onclick="selecionarHorario('12:00')">12:00</button>
+    </div>
+
+    <button id="confirmar" onclick="confirmarHorario()">Confirmar horário</button>
+  </div>
+
+  <script>
+    let horarioSelecionado = '';
+
+    function selecionarHorario(horario) {
+      horarioSelecionado = horario;
+      const botoes = document.querySelectorAll('.horarios button');
+      botoes.forEach(btn => btn.style.background = 'transparent');
+      event.target.style.background = '#00e5ff';
+      event.target.style.color = 'black';
+    }
+
+    function confirmarHorario() {
+      const data = document.getElementById('data').value;
+      if (!data || !horarioSelecionado) {
+        alert("Selecione uma data e um horário!");
+        return;
+      }
+
+      const mensagem = `Olá, gostaria de agendar minha pescaria para o dia ${data} às ${horarioSelecionado}.`;
+      const numero = "5541987724730"; // Substitua por seu número
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>

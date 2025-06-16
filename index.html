@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Caio Miyoshi Pesca Esportiva🎣</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -15,9 +16,9 @@
       height: 100%;
       width: 100%;
       overflow-x: hidden;
-      font-family: 'Segoe UI', sans-serif;
-      color: #00e5ff;
+      font-family: 'Poppins', sans-serif;
       text-align: center;
+      color: #e0f7fa;
     }
 
     body {
@@ -26,10 +27,7 @@
       align-items: center;
       min-height: 100vh;
       background-color: transparent;
-      padding-top: env(safe-area-inset-top);
-      padding-left: env(safe-area-inset-left);
-      padding-right: env(safe-area-inset-right);
-      padding-bottom: env(safe-area-inset-bottom);
+      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     }
 
     #fundo-fixo {
@@ -43,16 +41,25 @@
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 2.4em;
       margin: 30px 0 10px;
-      text-shadow: 0 0 10px #000;
+      text-shadow: 2px 2px 10px #000;
+      color: #ffffff;
+    }
+
+    h3 {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+      color: #b3f5ff;
+      text-shadow: 1px 1px 6px #000;
     }
 
     p {
-      margin-bottom: 30px;
-      font-size: 18px;
-      color: white;
-      text-shadow: 0 0 5px #000;
+      margin: 0 20px 30px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #ffffff;
+      text-shadow: 1px 1px 5px #000;
     }
 
     .fotos-topo {
@@ -70,14 +77,13 @@
       object-fit: cover;
       border-radius: 15px;
       border: 2px solid #00e5ff;
-      transform: rotate(0deg);
     }
 
     .container {
-      background: rgba(0,0,0,0.6);
+      background: rgba(0, 0, 0, 0.7);
       padding: 20px;
       border-radius: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
       max-width: 400px;
       width: 90%;
       margin-bottom: 30px;
@@ -88,7 +94,7 @@
       font-size: 18px;
       border-radius: 10px;
       border: 2px solid #00e5ff;
-      background: transparent;
+      background: rgba(0, 0, 0, 0.5);
       color: #00e5ff;
       cursor: pointer;
       transition: 0.3s;
@@ -97,7 +103,7 @@
 
     #marcar:hover {
       background: #00e5ff;
-      color: black;
+      color: #000;
     }
 
     .galeria {
@@ -108,7 +114,8 @@
       margin: 20px 0;
     }
 
-    .galeria img {
+    .galeria img,
+    .galeria video {
       width: 100%;
       height: 180px;
       border-radius: 12px;
@@ -116,19 +123,12 @@
       object-fit: cover;
     }
 
-    .galeria video {
-      width: 100%;
-      max-height: 180px;
-      border-radius: 12px;
-      border: 2px solid #00e5ff;
-      object-fit: cover;
-    }
-
     footer {
       margin-top: 30px;
-      color: white;
-      text-shadow: 0 0 5px #000;
+      color: #ffffff;
+      text-shadow: 1px 1px 4px #000;
       padding: 10px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -136,14 +136,12 @@
   <div id="fundo-fixo"></div>
 
   <h1>Caio Miyoshi Pesca Esportiva🎣</h1>
-  <h3>🎣 Viva a Experiência da Pesca Esportiva 
-              com Caio Miyoshi!</h3>
-  <br>
-  <p>Se você busca um momento de lazer, contato com a natureza e muita adrenalina, a pesca esportiva é para você! Aqui, você fisga grandes peixes, tira aquela foto incrível, e depois devolve o peixe com todo o cuidado para que ele continue sua jornada.
-
-É uma aventura emocionante, segura e cheia de respeito pela vida marinha. Ideal para quem ama o mar, quer relaxar, se divertir ou viver algo novo ao lado da família e amigos.
-
-Venha viver essa experiência única! Com Caio Miyoshi, cada pescaria vira uma lembrança inesquecível! 🌅🐟🚤</p>
+  <h3>🎣 Viva a Experiência da Pesca Esportiva com Caio Miyoshi!</h3>
+  <p>
+    Se você busca um momento de lazer, contato com a natureza e muita adrenalina, a pesca esportiva é para você! Aqui, você fisga grandes peixes, tira aquela foto incrível, e depois devolve o peixe com todo o cuidado para que ele continue sua jornada.<br><br>
+    É uma aventura emocionante, segura e cheia de respeito pela vida marinha. Ideal para quem ama o mar, quer relaxar, se divertir ou viver algo novo ao lado da família e amigos.<br><br>
+    Venha viver essa experiência única! Com Caio Miyoshi, cada pescaria vira uma lembrança inesquecível! 🌅🐟🚤
+  </p>
 
   <div class="fotos-topo">
     <img src="80e20e4e-e524-4de4-ba6f-bfd5faec9b92.jpeg" alt="Peixe 1" />

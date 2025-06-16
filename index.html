@@ -1,132 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Caio Miyoshi Pesca Esportiva🎣</title>
-  <style>
-    /* Reset global */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Caio Miyoshi Pesca Esportiva🎣</title>
+<style>
+  /* Reset global completo */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    html, body {
-      height: 100%;
-      width: 100%;
-      overflow-x: hidden;
-      background: url('35a2aa82-fd87-453e-862b-4ed3d37002a3.jpeg') no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Segoe UI', sans-serif;
-      color: #00e5ff;
-      text-align: center;
-    }
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: url('35a2aa82-fd87-453e-862b-4ed3d37002a3.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+    color: #00e5ff;
+    text-align: center;
+    background-color: transparent !important;
+    border: 3px solid red; /* TESTE: contorno para ver onde está a área do body */
+  }
 
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-      width: 100%;
-    }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    background-color: transparent !important;
+  }
 
-    h1, p {
-      margin: 0;
-      padding: 0;
-      text-shadow: 0 0 10px #000;
-    }
+  h1, p {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: inherit;
+    text-shadow: 0 0 10px #000;
+  }
 
-    h1 {
-      font-size: 2.5em;
-      margin-top: 30px;
-    }
+  h1 {
+    font-size: 2.5em;
+    margin-top: 30px;
+  }
 
-    p {
-      margin-top: 10px;
-      font-size: 18px;
-      color: white;
-      text-shadow: 0 0 5px #000;
-    }
+  p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+    text-shadow: 0 0 5px #000;
+  }
 
-    .fotos-topo {
-      display: flex;
-      gap: 15px;
-      margin: 30px 0 20px 0;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100%;
-      max-width: 900px;
-      padding: 0 15px;
-    }
+  .fotos-topo {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 15px;
+  }
 
-    .fotos-topo img {
-      width: 90px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 15px;
-      border: 2px solid #00e5ff;
-    }
+  .fotos-topo img {
+    width: 90px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #00e5ff;
+  }
 
-    .container {
-      background: rgba(0,0,0,0.6);
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-      max-width: 400px;
-      width: 90%;
-      margin-bottom: 30px;
-    }
+  .container {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    max-width: 400px;
+    width: 90%;
+    margin-bottom: 30px;
+  }
 
-    #marcar {
-      padding: 15px 30px;
-      font-size: 18px;
-      border-radius: 10px;
-      border: 2px solid #00e5ff;
-      background: transparent;
-      color: #00e5ff;
-      cursor: pointer;
-      transition: 0.3s;
-      width: 100%;
-    }
+  #marcar {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #00e5ff;
+    background: transparent;
+    color: #00e5ff;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+  }
 
-    #marcar:hover {
-      background: #00e5ff;
-      color: black;
-    }
+  #marcar:hover {
+    background: #00e5ff;
+    color: black;
+  }
 
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 15px;
-      max-width: 90%;
-      margin: 20px 0;
-    }
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    max-width: 90%;
+    margin: 20px 0;
+  }
 
-    .galeria img,
-    .galeria video {
-      width: 100%;
-      border-radius: 12px;
-      border: 2px solid #00e5ff;
-      object-fit: cover;
-    }
+  .galeria img,
+  .galeria video {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #00e5ff;
+    object-fit: cover;
+  }
 
-    .galeria video {
-      max-height: 180px;
-    }
+  .galeria video {
+    max-height: 180px;
+  }
 
-    footer {
-      margin-top: 30px;
-      color: white;
-      text-shadow: 0 0 5px #000;
-      padding: 10px;
-    }
-  </style>
+  footer {
+    margin-top: 30px;
+    color: white;
+    text-shadow: 0 0 5px #000;
+    padding: 10px;
+  }
+</style>
 </head>
 <body>
   <h1>Caio Miyoshi Pesca Esportiva</h1>
-  <p>Me Chame No Whatsapp</p>
+  <p>deu certo</p>
 
   <!-- Fotos no topo -->
   <div class="fotos-topo">

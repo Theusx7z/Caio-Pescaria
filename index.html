@@ -1,186 +1,28 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Caio Miyoshi Pesca Esportiva🎣</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<!-- Apenas o trecho de estilo atualizado -->
+<style>
+  /* ... seu CSS anterior ... */
 
-    html, body {
-      height: 100%;
-      width: 100%;
-      overflow-x: hidden;
-      font-family: 'Segoe UI', sans-serif;
-      color: #00e5ff;
-      text-align: center;
-    }
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    max-width: 90%;
+    margin: 20px 0;
+  }
 
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      background-color: transparent;
-      padding-top: env(safe-area-inset-top);
-      padding-left: env(safe-area-inset-left);
-      padding-right: env(safe-area-inset-right);
-      padding-bottom: env(safe-area-inset-bottom);
-    }
+  .galeria img {
+    width: 100%;
+    height: 180px; /* Tamanho fixo para todas as imagens */
+    border-radius: 12px;
+    border: 2px solid #00e5ff;
+    object-fit: cover;
+  }
 
-    #fundo-fixo {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: url('IMG_5070.png') no-repeat center center;
-      background-size: cover;
-      z-index: -1;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin: 30px 0 10px;
-      text-shadow: 0 0 10px #000;
-    }
-
-    p {
-      margin-bottom: 30px;
-      font-size: 18px;
-      color: white;
-      text-shadow: 0 0 5px #000;
-    }
-
-    .fotos-topo {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-      max-width: 100%;
-    }
-
-    .fotos-topo img {
-      width: 90px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 15px;
-      border: 2px solid #00e5ff;
-      transform: rotate(0deg); /* Fotos retas */
-    }
-
-    .container {
-      background: rgba(0,0,0,0.6);
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-      max-width: 400px;
-      width: 90%;
-      margin-bottom: 30px;
-    }
-
-    #marcar {
-      padding: 15px 30px;
-      font-size: 18px;
-      border-radius: 10px;
-      border: 2px solid #00e5ff;
-      background: transparent;
-      color: #00e5ff;
-      cursor: pointer;
-      transition: 0.3s;
-      width: 100%;
-    }
-
-    #marcar:hover {
-      background: #00e5ff;
-      color: black;
-    }
-
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 15px;
-      max-width: 90%;
-      margin: 20px 0;
-    }
-
-    .galeria img,
-    .galeria video {
-      width: 100%;
-      border-radius: 12px;
-      border: 2px solid #00e5ff;
-      object-fit: cover;
-    }
-
-    .galeria video {
-      max-height: 180px;
-    }
-
-    footer {
-      margin-top: 30px;
-      color: white;
-      text-shadow: 0 0 5px #000;
-      padding: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div id="fundo-fixo"></div>
-
-  <h1>Caio Miyoshi Pesca Esportiva🎣</h1>
-  <p>Me ajuda Deus</p>
-
-  <!-- Fotos do topo -->
-  <div class="fotos-topo">
-    <img src="80e20e4e-e524-4de4-ba6f-bfd5faec9b92.jpeg" alt="Peixe 1" />
-    <img src="6d112f1e-f583-4198-98ed-19106450854f.jpeg" alt="Peixe 2" />
-    <img src="74263b31-2e91-44a1-9d3b-9cd481dc317a.jpeg" alt="Peixe 3" />
-    <img src="5111b590-75ae-4a07-817a-605e021e5d1f.jpeg" alt="Peixe 4" />
-    <img src="fedd4f09-1968-4e50-af48-177b7fdec1b4.jpeg" alt="Peixe 5" />
-    <img src="2712ba72-8d5a-4311-b1fd-4fbd01aea575.jpeg" alt="Peixe 6" />
-  </div>
-
-  <!-- Botão -->
-  <div class="container">
-    <button id="marcar" onclick="marcarHorario()">Marcar horário</button>
-  </div>
-
-  <!-- Galeria -->
-  <div class="galeria">
-    <img src="811ea81f-c6b8-4cae-8abf-36afeea0ce9e.jpeg" alt="Foto 1" />
-    <img src="77f9a728-0f45-439b-a206-2d797fde7117.jpeg" alt="Foto 2" />
-    <img src="e21e4e9b-20b0-489d-986e-dc3e0388aeed.jpeg" alt="Foto 3" />
-    <img src="https://i.imgur.com/qzSpHbM.jpeg" alt="Foto 4" />
-    <img src="https://i.imgur.com/LFgB6Ek.jpeg" alt="Foto 5" />
-    <img src="https://i.imgur.com/Z7qG9VE.jpeg" alt="Foto 6" />
-    <img src="https://i.imgur.com/1b9L5Qn.jpeg" alt="Foto 7" />
-    <img src="https://i.imgur.com/WrmSY8Z.jpeg" alt="Foto 8" />
-    <img src="https://i.imgur.com/qzSpHbM.jpeg" alt="Foto 9" />
-    <img src="https://i.imgur.com/LFgB6Ek.jpeg" alt="Foto 10" />
-    <img src="https://i.imgur.com/Z7qG9VE.jpeg" alt="Foto 11" />
-    <img src="https://i.imgur.com/WrmSY8Z.jpeg" alt="Foto 12" />
-
-    <!-- Três vídeos -->
-    <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
-    <video src="https://www.w3schools.com/html/movie.mp4" controls></video>
-    <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
-  </div>
-
-  <footer>
-    ©2025 Caio Miyoshi Pesca Esportiva🎣
-  </footer>
-
-  <script>
-    function marcarHorario() {
-      const mensagem = `Olá! Gostaria de marcar um horário para a pescaria.`;
-      const numero = "5541987724730";
-      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-      window.open(url, "_blank");
-    }
-  </script>
-</body>
-</html>
+  .galeria video {
+    width: 100%;
+    max-height: 180px;
+    border-radius: 12px;
+    border: 2px solid #00e5ff;
+    object-fit: cover;
+  }
+</style>

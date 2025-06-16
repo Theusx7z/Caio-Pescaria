@@ -73,6 +73,26 @@
       background: #00e5ff;
       color: black;
     }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 15px;
+      max-width: 90%;
+      margin: 20px 0;
+    }
+
+    .galeria img,
+    .galeria video {
+      width: 100%;
+      border-radius: 12px;
+      border: 2px solid #00e5ff;
+      object-fit: cover;
+    }
+
+    .galeria video {
+      max-height: 180px;
+    }
   </style>
 </head>
 <body>
@@ -92,10 +112,30 @@
     <button id="marcar" onclick="marcarHorario()">Marcar horário</button>
   </div>
 
+  <!-- Galeria com 12 fotos -->
+  <div class="galeria">
+    <img src="https://i.imgur.com/Z7qG9VE.jpeg" alt="Foto 1">
+    <img src="https://i.imgur.com/1b9L5Qn.jpeg" alt="Foto 2">
+    <img src="https://i.imgur.com/WrmSY8Z.jpeg" alt="Foto 3">
+    <img src="https://i.imgur.com/qzSpHbM.jpeg" alt="Foto 4">
+    <img src="https://i.imgur.com/LFgB6Ek.jpeg" alt="Foto 5">
+    <img src="https://i.imgur.com/Z7qG9VE.jpeg" alt="Foto 6">
+    <img src="https://i.imgur.com/1b9L5Qn.jpeg" alt="Foto 7">
+    <img src="https://i.imgur.com/WrmSY8Z.jpeg" alt="Foto 8">
+    <img src="https://i.imgur.com/qzSpHbM.jpeg" alt="Foto 9">
+    <img src="https://i.imgur.com/LFgB6Ek.jpeg" alt="Foto 10">
+    <img src="https://i.imgur.com/Z7qG9VE.jpeg" alt="Foto 11">
+    <img src="https://i.imgur.com/WrmSY8Z.jpeg" alt="Foto 12">
+
+    <!-- Vídeos -->
+    <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+    <video src="https://www.w3schools.com/html/movie.mp4" controls></video>
+  </div>
+
   <script>
     function marcarHorario() {
       const mensagem = `Olá! Gostaria de marcar um horário para a pescaria.`;
-      const numero = "5541987724730"; // Seu número do WhatsApp
+      const numero = "5541987724730";
       const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
       window.open(url, "_blank");
     }
